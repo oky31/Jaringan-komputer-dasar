@@ -76,3 +76,56 @@ adalah IP address sebelum broadcast address
 1. lihat berapa prefix ip addres nya , jika tidak ada lihat subnet mask nya
 2. jika ada prefix, maka nilai prefix itu berarti jumlah angka 1 dalam 32 digit binari ip address dan host nya adalaha 2 di pangkat jumlah banyaknya 0 di dalam 32 digit binari ip address
 
+----------------Cara komputer mencari broadcast address----------------
+1. konversi subnet mask ke binari
+2. konversi ip address ke binari
+3. lakukan opersi bitwise OR binari subnetmask dan binari ip address
+
+# Cara Host berkomunikasi di dalam jaringan
+- Unicast -> mengirim packet dari 1 host hanya ke 1 host yang lain
+- Broadcast -> mengirim packet dari 1 host ke semua host dalam network
+- Multicast -> mengirim packet dari 1 host ke grup host tertentu, dan memungkinkan grup host yang memiliki network berbeda
+
+dan ketiga jenis komunikasi ini di gunakan untuk tujuan yang berbeda.
+
+# unicast
+Digunakan :
+- host ke host
+- host ke server
+- peer to peer network
+
+alamat unicast berapada pada 0.0.0.0 sampai 223.255.255.255.  tetapi di rentang ini ada pula alamat yang di sediakan untuk tujuan khusus 
+
+# broadcast
+untuk mengirim paket ke semua alamat di dalam jaringan maka kirim lah paket tersebut ke broadcast address dan otomatis seluruh host menerima paket yang di kirimkan.
+broadcast juga memungkin di gunakan di layer **Data Link** dengan mengirimkan data ke **MAC address FF:FF:FF:FF:FF:FF**
+
+Digunakan :
+- di gunakan oleh DHCP untuk mencari dan mengirim permintaan ke server masing-masing
+
+# multicast
+muticast mengurangi lalulintas data dengan mengirimkan paket tunggal ke kumpulan host yang di pilih.
+alamat multicast ada pada 224.0.0.0 sampai 239.255.255.255 dan untuk local network berada pada 224.0.0.0 sampai 224.0.0.255.
+
+- **multicast client** adalah host yang menerima multicast data
+- setiap grup multicast di representasikan oleh 1 IPv4 address
+Digunakan :
+- Routeing Information Protocol(RIP)
+
+# Ip Public dan Private 
+IP public -> adalah ip yang di gunakan oleh isp, ip yang di gunakan secara global
+IP private -> adalah ip yang di gunakan untuk internal host atau local area network
+
+## IP Private
+```
+class A -> 10.0.0.0/8 
+class B -> 172.16.0.0/12
+class C -> 192.168.0.0/16
+
+      Atau 
+
+class A -> 10.0.0.0 sampai 10.255.255.255
+class B -> 172.16.0.0/12 sampai 172.31.255.255
+class C -> 192.168.0.0/16 samapi 192.168.255.255
+
+```
