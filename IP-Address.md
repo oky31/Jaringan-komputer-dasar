@@ -73,3 +73,6 @@ adalah IP address setelah network address
 adalah IP address sebelum broadcast address
 
 ## Mencari jumlah host di dalam 1 network ?
+1. lihat berapa prefix ip addres nya , jika tidak ada lihat subnet mask nya
+2. jika ada prefix, maka nilai prefix itu berarti jumlah angka 1 dalam 32 digit binari ip address dan host nya adalaha 2 di pangkat jumlah banyaknya 0 di dalam 32 digit binari ip address
+
