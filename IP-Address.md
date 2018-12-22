@@ -129,3 +129,46 @@ class B -> 172.16.0.0/12 sampai 172.31.255.255
 class C -> 192.168.0.0/16 samapi 192.168.255.255
 
 ```
+
+# Special IPv4 Address
+- Loopback Address (127.0.0.0/8) -> untuk dirisendiri
+- Link-Local addresses (169.254.0.0 /16) -> private ip yang otomatis di gunakan oleh windows DHCP client untuk konfigurasi di sendiri, jika tidak ada server yang tersedia
+
+dan dijelaskan didalam RFC 3330
+
+# class IPv4
+ip di clasifikan berdasarkan alamat ip dan netmask
+
+```
+Class A 
+(0.0.0.0/8 to 127.0.0.0/8)
+128 Network
+16.777.214 host
+
+Class B 
+(128.0.0.0 /16 – 191.255.0.0 /16)
+16.384 Network
+65.534 host
+
+Class C 
+(192.0.0.0 /24 – 223.255.255.0 /24)
+2.097.152 Network
+254 host
+```
+setiap masing-masing class memiliki host yang berbeda2 berdasarkan prfix ipnya  
+
+**Catatan Penting !!**  
+pengunaan class di dalam IPv4 sudah lama di tingalkan semenjak tahun 90's.  
+Dan sistem yang di gunakan sekarang adalah **Classless Inter-Domain**(CIDR, pronounced "cider") jadi intinya tidak ada pengolongan class di dalam ip.
+
+# Lembaga Pengatur Pembagian IP address
+````
+IPv4 dan IPv6 -> Internet Assignet Numbers Authority(IANA)
+
+Antar Regional
+- ARIN (American Register for Internet Numbers) -> North America
+- LACNIC (Latin-American and Caribbean Ip Address Registry ) -> Amerika Latin dan Pulau Karibian
+- RIPE (Reseaux IP Europeans) -> Eropa, Middle Eest, Asia Tengah
+- APNIC (Asian Pacific Network Information Cetner) -> Asia, pasifik termasuk australia
+- AfriNIC (Afican Network Information Center) -> Afrika
+````
