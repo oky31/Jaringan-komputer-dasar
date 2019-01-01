@@ -74,7 +74,7 @@ dari kiri ke kanan
 ```
 
 # IPv6 Unicast
-2 tipe umum  IPv6 unicast :
+3 tipe umum  IPv6 unicast :
 ```  
 - Global unicast -> sama seperti ip public pada IPv4
 
@@ -90,3 +90,9 @@ dari kiri ke kanan
 
 
 # Struktur IPv6 Global Unicast Address
+- IANA hanya memberlakukan 3 bit dari 001 atau 2000::/3 , untuk global unicast IPv6
+
+3 bagian Global Unicast Adrees (GUA) :   
+* Global routing, prefix -> terdiri dari 48 bit pertama
+* Subnet ID -> terdiri dari 16 bit setelah 48 bit pertama
+* Interface ID -> teridiri dari 64 bit setelah 16 bit subnet ID
