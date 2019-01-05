@@ -89,10 +89,51 @@ dari kiri ke kanan
 - jika link local address tidak di konfigurasi secara manual, maka perangkat akan otomatis membuat nya sendiri dengan bantuan DHCP server.
 
 
-# Struktur IPv6 Global Unicast Address
+# Struktur IPv6 Global Unicast Address (GUA)
 - IANA hanya memberlakukan 3 bit dari 001 atau 2000::/3 , untuk global unicast IPv6
 
 3 bagian Global Unicast Adrees (GUA) :   
 * Global routing, prefix -> terdiri dari 48 bit pertama
 * Subnet ID -> terdiri dari 16 bit setelah 48 bit pertama
 * Interface ID -> teridiri dari 64 bit setelah 16 bit subnet ID
+
+2 cara untuk men-setting otomatis ipv6 global unicast pada host :
+* Stateless Address Autoconfiguration (SLAAC)
+* Stateful DHCPv6
+  
+untuk default gateway di tentukan secara otomatis oleh server
+
+#### Dynamic Configuration SLAAC
+metode untuk memberikan perangkat prefix, prefix lenght, default gateway address, dan informasi lain dari IPv6 router tanpa harus mengunakan DHCPv6 server.  
+IPv6 secara periodik mengirim ICMPv6 RA message setiap 200 detik .  
+**Isi pesan ICMPv6 RA**
+* network prefix dan prefix length
+* default gateway
+* DNS addresses dan domain name
+
+#### Dynamic Configuration (DHCPv6)
+untuk dhcpv6 ada 2 cara yaitu :
+* SLAAC and Stateless DHCPv6
+* Stateful DHCPv6
+
+cara kerja SLAAC and Stateless DHCPv6 :
+* SLAAC membuat sendiri IPv6 global unicast
+* alamat rotuer link-local di jadikan default gateway
+* stateless DHCPv6 server memberikan informasi lain seperti alamat DNS server dan nama domain
+
+cara kerja Stateful DHCPv6 :
+* alamat rotuer link-local di jadikan default gateway
+* statefull DHCPv6 server memberikan global unicast address, DNS server address, Domain name dan semua informasi yang berkaitan 
+
+ketika mengunakan SLAAC atau SLAAC with stateless DHCPv6, client harus membuat sendiri interface ID. untuk membuat interface ID mengunakan EUI-64 atau random 64-bit number
+
+#### proses pembuatan EUI-64
+proses ini mengunakan 48-bit Ethernet MAC adddress, dan 16-bit sisanya di masukan di tengah-tengah 48-bit MAC address
+
+
+# IPv6 Multicast Address
+Multicast ini sama dengan multicast yang ada di IPv4. untuk v6 memiliki prefix FF00::/8, mulicast address hanya bisa di gunakan sebagai destination address dan tidak bisa untuk source address.  
+ada 2 jenis IPv6 multicast address :  
+* Assignet multicast
+* Solicited node multicast
+
