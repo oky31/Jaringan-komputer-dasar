@@ -134,6 +134,20 @@ proses ini mengunakan 48-bit Ethernet MAC adddress, dan 16-bit sisanya di masuka
 # IPv6 Multicast Address
 Multicast ini sama dengan multicast yang ada di IPv4. untuk v6 memiliki prefix FF00::/8, mulicast address hanya bisa di gunakan sebagai destination address dan tidak bisa untuk source address.  
 ada 2 jenis IPv6 multicast address :  
-* Assignet multicast
+* Assigned multicast
 * Solicited node multicast
 
+
+## Assigned Multicast
+adalah jenis alamat yang sudah di tentukan sebelumnya pada sekumpulan perangkat. Assigned Multicast adalah sebuah alamat tunggal yang di gunakan untuk menjangkau sekelompok perangkat pada suatu protocol atau layanan, biasanya di gunakan pada DHCPv6
+
+2 jenis Assigned Multicast yang umum :  
+* FF02::1 semua node multicast grup -> dimana semua perangkat yang mendukung IPV6 bisa menjadi bagian dari grup ini
+* FF02::2 Semua router multicast grup -> hanya berangotakan router saja.
+
+
+
+# Sumber 
+http://www.ciscopress.com/articles/article.asp?p=2803866&seqNum=5
+
+http://www.ciscopress.com/articles/article.asp?p=2803866
