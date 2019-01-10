@@ -172,3 +172,6 @@ Antar Regional
 - APNIC (Asian Pacific Network Information Cetner) -> Asia, pasifik termasuk australia
 - AfriNIC (Afican Network Information Center) -> Afrika
 ````
+
+
+# cari algoritma konversi desimal ke binary
