@@ -55,7 +55,7 @@ Di dalam alamat IPv4  berisi Network, Host, dan Broadcast Addresses :
 
 ## Mencari Subnet Mask ?
 1. konversi prefix ip kedalam binari
-2. konversi binari prefix if ke dalam desimal
+2. konversi binari prefix ip ke dalam desimal
 
 ## Mencari Networ Address ?
 "Network address adalah alamat ip pertama di dalam network, berdasarkan class ip nya"   
