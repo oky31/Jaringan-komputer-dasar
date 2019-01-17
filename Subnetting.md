@@ -73,5 +73,5 @@ Jadi magic numbernya adalah 128, jadi untuk mencari network cukup tambahkan alam
    192.168.0.0/25 
    memiliki network 2 yaitu :
    192.168.0.0
-   192.168.0.0
+   192.168.128.0
 ```
