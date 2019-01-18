@@ -75,3 +75,39 @@ Jadi magic numbernya adalah 128, jadi untuk mencari network cukup tambahkan alam
    192.168.0.0
    192.168.128.0
 ```
+
+# Setelah Dapat Subenet
+setelah menemukan subnet, di dalam setiap subnet harus memiliki :
+```
+total usable host -> 2^n-2
+Network Addres ->
+First host Address ->
+Last host Address ->
+Broadcast Address ->
+
+Keterangan :
+n -> jumlah host yang di pinjam
+```
+
+# Rumus subnet
+Menghitung jumlah host 
+```
+2^n dimana n adalah jumlah 0 yang terdapat di bit subnet mask
+```
+
+# Subnetting berdasarkan kebutuhan
+2 pertimbangan untuk membuat subnet :
+- Jumlah host yang di butuhkan di setiap network
+- Jumlah sub-network yang di butuhkan
+
+
+# Variable Length Subnet mask (VLSM)
+
+# kata Kunci
+- network address
+- first host address
+- last host address
+- broadcast address
+
+# Wajib di inggat
+- untuk mencari alamat network di dalam subnet, gunakan magic number untuk mempermudah
