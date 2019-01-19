@@ -102,6 +102,41 @@ Menghitung jumlah host
 
 
 # Variable Length Subnet mask (VLSM)
+ada untuk menghindarkan ip addres yang tidak terpakai terbuang sia-sia.  
+pad tradisional subnetting setiap subnet itu memiliki jumlah host yang sama, sedangkan dengan VLSM bisa membagi jumlah host yang tidak sama di setiap subnet. dengan VLSM subnet mask akan tergatung pada berapa banyak bit yang telah di pinjam  untuk subnet tertentu.  
+VLSM  subnetting serupa dengan tradisional subnetting dalam meminjam bit netwrok untuk membuat subnet, dan untuk menghitung host persubnet.   
+Tetapi perbedaanya subnetting yang mengunakan VLSM subnetting tidak selesai hanya pada satu kali subnet. dengan VLSM, network yang telah di subnet bisa di subnet lagi, dan proses ini bisa di ulang beberapa kali sehingga memiliki jumlah host yang berbeda-beda
+
+Catatan :  
+Ketika mengunakan VLSM,  selalu mulai dengan memenuhi kebutuhan host dari subnet yang paling besar, dan lanjutkan sampai dengan kebutuhan host pada subnet yang kecil
+
+## Dasar VLSM
+1. subnet tidak harus memiliki jumlah host yang sama, selama rentang alamat tidak overlap
+2. ketika membuat subnet mulai dari yang jumlah host paling besar ke yang paling kecil
+
+Contoh :  
+kita memiliki IPv4 192.168.1.0/24 pecah menjadi subnet :
+```
+192.168.1.0 /26
+192.168.1.64 /26
+192.168.1.128 /26
+192.168.1.192 /26
+
+karna kebutuhan untuk host tidak sebesar /26, maka salah satu subnet di atas bisa pecah lagi seperti dibawah ini
+
+192.168.1.192 /26 di pecah menjadi :
+
+192.168.1.192/27
+192.168.1.224/27
+
+```
+
+# Jenis Perangkat yang membutuhkan Alamat IP
+* End User clients
+* Servers and Peripherals
+* Servers yang di akses dari internet
+* Intermediary devices
+* Gateway
 
 # kata Kunci
 - network address
